@@ -12,7 +12,7 @@ RUN cargo build --release
 
 # build application
 COPY src/main.rs /usr/src/app/src/main.rs
-RUN cargo install --release --path .
+RUN cargo install --path .
 
 EXPOSE 8000
 CMD ["/usr/src/app/clamav-rest.debug"]
