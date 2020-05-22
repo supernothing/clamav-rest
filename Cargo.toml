@@ -7,7 +7,21 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clamav = "0.4.0"
+clamav = { git= "https://github.com/supernothing/rust-clamav", branch = "master" }
 actix-web = "2.0.0"
 actix-rt = "1.1.1"
 awmp = { version = "0.5.1", default-features = false, features = ["v2"] }
+serde = "1.0.110"
+serde_derive = "1.0.110"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+lto = true
+opt-level = 3
+panic = "abort"
+
+[[bin]]
+name = "clamav-rest"
+path = "src/main.rs"

@@ -459,8 +459,7 @@ dependencies = [
 [[package]]
 name = "clamav"
 version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2476dcff78f3fa9da54afd64fc48cb51d1558569061b574da5a13a6ac917b63c"
+source = "git+https://github.com/supernothing/rust-clamav#32ccfa6f762c601c3c90d63cda535e1ccef5c2ee"
 dependencies = [
  "libc",
 ]
@@ -473,6 +472,8 @@ dependencies = [
  "actix-web",
  "awmp",
  "clamav",
+ "serde",
+ "serde_derive",
 ]
 
 [[package]]
